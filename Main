@@ -1,0 +1,46 @@
+public class Main {
+
+    public static void main(String[] args){
+ 
+//        long t = System.currentTimeMillis();
+//
+////        String text = "";
+//        StringBuilder sb = new StringBuilder();
+//        for(int i = 0; i <= 100000; ++i){
+////        text += "*";
+//        sb.append('*');
+//        }
+//        String text = sb.toString();
+//        
+//        System.out.println((System.currentTimeMillis() - t) +  "ms");
+
+
+        String tekst = "ABCD";
+        int key = 1;
+
+        StringBuilder sb = new StringBuilder();
+        tekst.chars()
+//                    .filter(c -> c >= 'A')
+                    .mapToObj(c -> (char)c + key)
+                    .forEach(c -> {
+//                        System.out.println(c);
+                        sb.append(c);
+});
+
+
+        String encryptedTekst = sb.toString();
+
+        System.out.println("Tekst: " + encryptedTekst);
+
+//        String encryptedTekst = "";
+//        StringBuilder sb = new StringBuilder();
+//        for(int i = 0; i<=tekst.length(); ++i){
+//            int c = tekst.charAt(i);
+//            c = c + key;
+//            sb.append((char)c);
+//        }
+//        String encryptedTekst = sb.toString();
+
+//        System.out.println("Tekst: " + encryptedTekst);
+    }    
+}
